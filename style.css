@@ -173,3 +173,37 @@ img{
         transform: translateY(2000%)
     }
 }
+
+/********* follower **********/
+.cursor{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    top: 20%;
+    left: 20%;
+}
+.cursor::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 6px solid white;
+    opacity: 0.5;
+    top: -7px;
+    left: -7px;
+    border-radius: 50%;
+    animation: cursorAnim1 0.5s infinite alternate;
+    transform: scale(1.5);
+    z-index: 3;
+}
+@keyframes cursorAnim1{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.4);
+    }
+}
